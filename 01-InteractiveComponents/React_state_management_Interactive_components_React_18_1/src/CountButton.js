@@ -7,7 +7,7 @@ function CountButton () {
     };
     return (
         <button onClick={handleClick}>
-            Click count: {clickCount}
+            Click Count: {clickCount}
         </button>
     )
 }
