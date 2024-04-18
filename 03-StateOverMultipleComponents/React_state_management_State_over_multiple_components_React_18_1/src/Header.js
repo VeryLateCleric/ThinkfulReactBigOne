@@ -4,9 +4,9 @@ function Header({ loggedIn, handleLoggedInClick, handleFontSizeIncrease }) {
   return (
     <div>
       <button onClick={handleLoggedInClick}>
-        {loggedIn ? "Logout" : "/Log In/i"}
+        {loggedIn ? "Logout" : "Log In"}
       </button>
-      <button onClick={handleFontSizeIncrease}>/Increase Font Size/i</button>
+      <button onClick={handleFontSizeIncrease}>Increase Font size</button>
     </div>
   );
 }
