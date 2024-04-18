@@ -5,11 +5,11 @@ function IncrementButtons() {
   const [lastPressed, setLastPressed] = useState(null);
   const handleClick = (label) => {
     setLastPressed(label);
-    if (lastPressed === "One") {
+    if (label === "One") {
       setCount(count + 1);
-    } else if (lastPressed === "Two") {
-      setCount(count + 1);
-      setCount(count + 1);
+    } else if (label === "Two") {
+      setCount(count + 2);
+      setCount(count + 2);
     }
   };
   return (
