@@ -17,9 +17,10 @@ function App() {
         handleLoggedInClick={handleLoggedInClick}
         handleFontSizeIncrease={handleFontSizeIncrease}
       />
-      <Content fontSize={fontSize} />
+      <Content loggedIn={loggedIn} fontSize={fontSize} />
     </div>
-  );
+      //Needed condition to dsplay content while loggedIn only 
+);
 }
 
 export default App;
