@@ -41,6 +41,7 @@ function DogForm() {
                     required
                 />  
             </div>
+            <button type="submit">Submit</button>
         </form>
     )
 }
