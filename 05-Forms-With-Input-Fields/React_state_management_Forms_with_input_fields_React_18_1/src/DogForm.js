@@ -5,7 +5,10 @@ function DogForm() {
     const [breed, setBreed] = useState("");
     const [age, setAge] = useState("");
 
-    const handleSubmit = () => {
+    const handleSubmit = (event) => {
+        event.preventDefault();
+
+        console.log(`"${name}" "${breed}" "${age}"`);
 
     }
 
