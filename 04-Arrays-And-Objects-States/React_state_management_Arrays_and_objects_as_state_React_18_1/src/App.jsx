@@ -11,7 +11,8 @@ function App() {
 
   return (
     <div>
-      
+      <ClickTimes onButtonClick={handleButtonClick}/>
+      <TimestampsDisplay timestamps={timestamps}/>
     </div>
   )
 }
