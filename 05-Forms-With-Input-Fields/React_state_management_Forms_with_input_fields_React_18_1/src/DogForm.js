@@ -8,8 +8,11 @@ function DogForm() {
     const handleSubmit = (event) => {
         event.preventDefault();
 
-        console.log(`"${name}" "${breed}" "${age}"`);
-
+        console.log(`${name}`, `${breed}`, `${age}`);
+        
+        setName("");
+        setBreed("");
+        setAge("");
     }
 
     return (
