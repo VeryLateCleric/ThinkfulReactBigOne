@@ -6,7 +6,8 @@ function App() {
   const [timestamps, setTimestamps] = useState([]);
 
   const handleButtonClick = () => {
-    const newTimestamps = [...timestamps, Date.now()]
+    const newTimestamps = [...timestamps, Date.now()];
+    setTimestamps(newTimestamps)
   }
 
   return (
