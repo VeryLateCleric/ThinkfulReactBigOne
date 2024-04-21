@@ -15,7 +15,7 @@ function RSVPForm() {
         console.log(`${name}`, `${age}`, isNewMember, `${comment}`)
         setName("");
         setAge("");
-        setIsNewMember("");
+        setIsNewMember(false);
         setComment("");
     };
 
