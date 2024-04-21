@@ -15,9 +15,9 @@ function PostCreate() {
   // - one child `<button>` with a `type="submit"` attribute
   // - one child `<select>` with a `name="type"` attribute
   // - one child `<textarea>` or `<input>` (not both at the same time) with a `name="content"`
-
+  
   return (
-    <form name="create">
+    <form name="create" onSubmit={handleSubmit}>
       <fieldset>
         <legend>Create</legend>
         <div>
