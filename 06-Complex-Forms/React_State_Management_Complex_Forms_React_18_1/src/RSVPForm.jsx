@@ -23,16 +23,29 @@ function RSVPForm() {
         <form onSubmit={handleSubmit}>
             <div>
                 <label>Name:</label>
+                <input type="text" value={name} onChange={handleNameChange} />
             </div>
             <div>
                 <label>Age:</label>
+                <select value={age} onChange={handleAgeChange}>
+                    <option value="">Prefer not to say</option>  
+                    <option value="0-19">0-19</option> 
+                    <option value="20-39">20-39</option> 
+                    <option value="40-59">40-59</option> 
+                    <option value="60+">60+</option> 
+                </select>
             </div>
             <div>
-                <label>New Member:</label>
+                <label>
+                    New Member:
+                    <input type="checkbox" checked={isNewMember} onChange={handleNewMemberChange} />
+                </label>
             </div>
             <div>
                 <label>Comment:</label>
+                <textarea value={comment} onChange={handleCommentChange} />
             </div>
+            <button type="submit">Submit</button>
         </form>
     );
 }
