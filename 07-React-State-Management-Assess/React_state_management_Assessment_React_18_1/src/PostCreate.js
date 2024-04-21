@@ -5,7 +5,7 @@ import React, { useState } from "react";
  *
  * When the form is submitted, a new post is created and the form contents cleared.
  */
-function PostCreate(createPost) {
+function PostCreate({ createPost }) {
   const [type, setType] = useState("Text");
   const [content, setContent] = useState("");
 
@@ -30,21 +30,43 @@ function PostCreate(createPost) {
         <legend>Create</legend>
         <div>
           <label htmlFor="type">Type: </label>
-          <select id="type" name="type" required={true}>
-            <option>Text</option>
-            <option>Image</option>
+          <select
+            id="type"
+            name="type"
+            value={type}
+            onChange={(e) => setType(e.target.value)}
+            required={true}
+          >
+            <option value="Text">Text</option>
+            <option value="Image">Image</option>
           </select>
         </div>
         <div>
           <label htmlFor="content">Content: </label>
           {type === "Text" ? (
-            <textarea id="content" name="content" required={true} rows={3} />
+            <textarea 
+              id="content"
+              name="content"
+              value={content}
+              onChange={(e) => setContent(e.target.value)}
+              required={true}
+              rows={3} 
+            />
           ) : (
-            <input id="content" name="content" type="url" required={true} />
+            <input
+              id="content"
+              name="content"
+              type="url"
+              value={content}
+              onChange={(e) => setContent(e.target.value)}
+              required={true}
+            />
           )}
         </div>
         <div>
-          <button type="submit" data-testid="formSubmit">Submit</button>
+          <button type="submit" data-testid="formSubmit">
+            Submit
+          </button>
         </div>
       </fieldset>
     </form>
