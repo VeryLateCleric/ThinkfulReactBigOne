@@ -12,7 +12,7 @@ function RSVPForm() {
     const handleCommentChange = (event) => {setComment(event.target.value);}
     
     const handleSubmit = (event) => {
-        console.log(`${name}`, `${age}`, `${isNewMember}`, `${comment}`)
+        console.log(`${name}`, `${age}`, isNewMember, `${comment}`)
         setName("");
         setAge("");
         setIsNewMember("");
